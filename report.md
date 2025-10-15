@@ -2,7 +2,7 @@
 
 ## Welcome to EcoAgent! 🌍
 
-Your complete NVIDIA Nemotron-powered environmental reporting system is ready.
+Your complete NVIDIA Nemotron-powered environmental reporting system
 
 ---
 
@@ -99,15 +99,6 @@ Expected output:
 ### 6. Download Report
 - Click "📥 Download Full Report"
 - Save for submission to authorities
-
----
-
-## 📚 Documentation Quick Links
-
-| I want to... | Read this... |
-|--------------|--------------|
-| Get started quickly | `QUICKSTART.md` |
-| Learn all features | `README.md` |
 
 ---
 
@@ -305,6 +296,4 @@ Everything is configured and ready. Launch EcoAgent and start making a differenc
 
 **Ready?** Let's analyze some waste and generate reports! 🚀
 
----
 
-**Powered by NVIDIA Nemotron**
