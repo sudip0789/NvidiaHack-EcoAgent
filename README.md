@@ -2,7 +2,7 @@
 
 **AI-Powered Environmental Reporting System**
 
-EcoAgent is an intelligent application that analyzes images of waste and pollution, classifies environmental issues, estimates severity, and generates professional civic reports for environmental authorities—all powered by NVIDIA Nemotron models.
+EcoAgent is an intelligent application that analyzes images of waste and pollution, classifies environmental issues, estimates severity, and generates professional civic reports for environmental authorities.
 
 ---
 
@@ -58,7 +58,7 @@ ecoagent/
 
 1. **Clone or navigate to the project directory:**
    ```bash
-   cd ecoagent
+   cd nvidiahack-ecoagent
    ```
 
 2. **Install dependencies:**
@@ -112,67 +112,6 @@ python eco_agent.py waste_photo.jpg "Central Park, New York"
 - **Severity Assessment** - Risk evaluation and urgency
 - **Raw Data** - JSON view of all analysis data
 - **Download Report** - Export report as text file
-
----
-
-## 🔧 Configuration
-
-### Environment Variables
-
-Create or edit `.env` file:
-
-```env
-NVIDIA_API_KEY=your_api_key_here
-```
-
-### Settings (in Streamlit UI)
-
-- **Use AI for severity estimation** - Toggle between LLM and rule-based severity assessment
-
----
-
-## 🧪 Example Usage
-
-### Python API
-
-```python
-from eco_agent import EcoAgent
-
-# Initialize agent
-agent = EcoAgent(verbose=True)
-
-# Analyze image
-results = agent.analyze_image(
-    image_path_or_bytes="waste_image.jpg",
-    location="Downtown City Center",
-    additional_notes="Large accumulation near water source"
-)
-
-# Get formatted report
-report = agent.get_formatted_report(results)
-print(report)
-```
-
-### Individual Tools
-
-```python
-from utils.helpers import encode_image_to_base64
-from tools.waste_classifier import classify_waste
-from tools.severity_estimator import estimate_severity
-from tools.report_generator import generate_civic_report
-
-# Encode image
-image_base64 = encode_image_to_base64("image.jpg")
-
-# Classify waste
-classification = classify_waste(image_base64)
-
-# Estimate severity
-severity = estimate_severity(classification, location="City Park")
-
-# Generate report
-report = generate_civic_report(classification, severity, location="City Park")
-```
 
 ---
 
